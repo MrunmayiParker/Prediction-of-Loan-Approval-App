@@ -1,0 +1,109 @@
+/* .formcontainer{
+    border: 2px solid black; 
+    margin: 10%;
+}
+
+.forminline{
+    
+    /* border: 2px solid black; */
+
+    .outside{
+        background-color: lightblue;
+        padding: 10%;
+        border-radius: 0px 0px 0 50px ;
+    }
+
+    .title{
+        font-size: 35px;
+    }
+   .formcontainer{
+    /* border: 2px solid black; */
+    margin: 5%;
+    /* margin-top: -15%; */
+    /* border-radius: 0px 50px 0px 0px; */
+    /* background-color: white; */
+    /* border: 2px solid black; */
+    /* background-color: white; */
+   }
+      
+      .labelr {
+        display: block;
+        margin-top: 10px;
+        /* vertical-align: middle; */
+      }
+      
+    
+
+      .radio-buttons {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+       
+        
+      }
+
+      .radiobuttons input[type="radio"]{
+        vertical-align: middle;
+      }
+      
+      input[type="radio"] {
+        display: none;
+      }
+      
+      input[type="radio"] + .labelr {
+        display: inline-block;
+        padding: 5px 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 5%;
+      }
+
+      input[type="radio"] + .labelr:hover{
+        transition: 0.5s all ease;
+        background-color: #000000;
+        color: white;
+      }
+
+      .labelr:hover{
+        transition: 0.5s all ease;
+        background-color: #000000;
+        color: white;
+      }
+      
+      input[type="radio"]:checked + .labelr {
+        background-color: #006699;
+        color: #fff;
+        border-color: #006699;
+      }
+
+      .labelss{
+        font-size: 17px;
+        margin-right: 5%;
+        margin-top: 4%;
+        
+      }
+
+      .form-floating{
+        margin-top: 3%;
+        font-size: 17px;
+      }
+
+      input[type="submit"] {
+        background-color: #006699;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 5%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      input[type="submit"]:hover {
+        background-color: #003366;
+
+      }
+

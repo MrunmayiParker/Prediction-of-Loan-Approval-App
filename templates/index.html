@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="static\form.css">
+
+
+
+    <title>Loan Prediction</title>
+</head>
+<body>
+    <div class="outside"> 
+    <h1 class="title">Loan Prediction</h1>
+
+    </div>
+    
+    <form action="/predict", method="POST">
+    
+    <div class="formcontainer" >
+        <div class="forminline">
+           
+            <div class="radio-buttons">
+                <label for="gender" class="labelss">Gender</label>
+
+              <input type="radio" id="male" name="gender" value="male">
+              <label class="labelr" for="male">Male</label>
+              <input type="radio" id="female" name="gender" value="female">
+              <label class="labelr" for="female">Female</label>
+            </div>
+          
+            <div class="radio-buttons">
+            <label for="married"  class="labelss">Married</label>
+
+              <input type="radio" id="yes" name="married" value="yes">
+              <label class="labelr" for="yes">Yes</label>
+              <input type="radio" id="no" name="married" value="no">
+              <label class="labelr" for="no">No</label>
+            </div>
+          
+            <div class="radio-buttons">
+            <label for="dependents"  class="labelss">Dependents</label>
+
+                <input type="radio" id="dependents-0" name="dependents" value="0">
+                <label class="labelr" for="dependents-0">0</label>
+                <input type="radio" id="dependents-1" name="dependents" value="1">
+                <label class="labelr" for="dependents-1">1</label>
+                <input class="labelr" type="radio" id="dependents-2" name="dependents" value="2">
+                <label class="labelr" for="dependents-2">2</label>
+                <input type="radio" id="dependents-3" name="dependents" value="3+">
+                <label class="labelr" for="dependents-3">3+</label>
+            </div>
+          
+            <div class="radio-buttons">
+            <label for="education"  class="labelss">Education </label>
+
+              <input type="radio" id="graduate" name="education" value="graduate">
+              <label class="labelr" for="graduate">Graduate</label>
+              <input type="radio" id="not-graduate" name="education" value="not-graduate">
+              <label class="labelr" for="not-graduate">Not Graduate</label>
+            </div>
+          
+            <div class="radio-buttons">
+            <label for="self-employed"  class="labelss">Self Employed</label>
+
+              <input  type="radio" id="self-yes" name="self-employed" value="yes">
+              <label class="labelr" for="self-yes">Yes</label>
+              <input type="radio" id="self-no" name="self-employed" value="no">
+              <label class="labelr" for="self-no">No</label>
+            </div>
+
+            <div class="radio-buttons">
+                <label for="property"  class="labelss">Property Area</label>
+    
+                    <input type="radio" id="urban" name="property" value="urban">
+                    <label class="labelr" for="urban">Urban</label>
+                    <input type="radio" id="semi" name="property" value="semi">
+                    <label class="labelr" for="semi">Semi</label>
+                    <input class="labelr" type="radio" id="rural" name="property" value="rural">
+                    <label class="labelr" for="rural">Rural</label>
+                    
+                </div>
+    <div class="form-floating " >
+        <textarea class="form-control" placeholder="Leave a comment here" name="applicantincome" id="floatingTextarea"></textarea>
+        <label for="floatingTextarea">Applicant Income</label>
+      </div>
+
+      <div class="form-floating ">
+        <textarea class="form-control" name="coapplicantincome" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+        <label for="floatingTextarea">Coapplicant Income</label>
+      </div>
+
+    
+      <div class="form-floating textarea1">
+        <textarea class="form-control" name="loanamount" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+        <label for="floatingTextarea">Loan Amount</label>
+      </div>
+
+      <div class="form-floating textarea1">
+        <textarea class="form-control" name="loan-amount-term" placeholder="Type here" id="floatingTextarea"></textarea>
+        <label for="floatingTextarea">Loan Amount Term</label>
+      </div>
+
+
+      <div class="form-floating textarea1">
+        <textarea class="form-control" name="credithistory" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+        <label for="floatingTextarea">Credit History</label>
+      </div>
+
+      
+    </div>
+
+  
+        
+    <input type="submit" value="Submit">
+    
+</div>
+</form>
+
+{% if pred %}
+      <center><p style="font-size:30px">Your probabilty of getting a loan is approximately {{ pred }} </p></center>
+{% endif %}
+
+{% if negpro %}
+      <center><p style="font-size:30px">Your no percentage is  approximately {{ negpro * 100 }} %</p></center>
+{% endif %}
+
+{% if pospro %}
+      <center><p style="font-size:30px">Your yes percentage is approximately {{ pospro * 100 }} %</p></center>
+{% endif %}
+
+<br>
+<br>
+</body>
+</html>
