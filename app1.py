@@ -14,7 +14,7 @@ rf_clf =pickle.load(pickle_in)
 ss =pickle.load(pickle_inss)
 
 app = Flask(__name__)
-server = app.server
+# server = app.server
 @app.route('/')
 def hello_world():
     return render_template('index.html')
