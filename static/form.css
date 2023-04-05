@@ -6,11 +6,17 @@
 .forminline{
     
     /* border: 2px solid black; */
-
+    body{
+        background-color:#282828eb;
+        /* background-color: #082b4f; */
+    }
+    
     .outside{
-        background-color: lightblue;
+        background-color: #181818ce;
+        /* background-color:#404040; */
         padding: 10%;
         border-radius: 0px 0px 0 50px ;
+        color:white;
     }
 
     .title{
@@ -89,8 +95,9 @@
       }
 
       input[type="submit"] {
-        background-color: #006699;
-        color: #fff;
+        /* background-color: #72fe5fe7; */
+        background-color: #00968a;
+        color: black;
         border: none;
         padding: 10px 20px;
         border-radius: 5px;
@@ -103,7 +110,8 @@
       }
       
       input[type="submit"]:hover {
-        background-color: #003366;
-
+        background-color: #00665e;
+        transition: 0.5s all ease;
+        color:white;
       }
 
