@@ -11,13 +11,15 @@
       /* background-color: #082b4f; */
   }
   
-  .outside{
-      background-color: #181818ce;
-      /* background-color:#404040; */
-      padding: 10%;
-      border-radius: 0px 0px 0 50px ;
-      color:white;
-  }
+   .outside{
+        /* background-color: #00968a; */
+        background: rgb(62,58,58);
+        background: linear-gradient(90deg, rgba(62,58,58,1) 0%, rgba(0,102,94,1) 38%, rgba(0,102,94,1) 62%);
+        /* background-color:#404040; */
+        padding: 10%;
+        border-radius: 0px 0px 0 50px ;
+        color:rgb(255, 255, 255);
+    }
 
   .title{
       font-size: 35px;
