@@ -1,12 +1,12 @@
-from flask import Flask
+# from flask import Flask
 # import uvicorn
 # from fastapi import FastAPI
-from Loanly import Loans
+# from Loanly import Loans
 from flask import Flask, render_template, request
 import numpy as np
 import pickle
 import pandas as pd
-
+import sklearn
 pickle_in = open("rf_clf.pkl","rb")
 pickle_inss = open("ss.pkl","rb")
 
